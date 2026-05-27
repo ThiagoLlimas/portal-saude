@@ -10,15 +10,27 @@ export default function Footer() {
           família.
         </p>
 
-        {/* Atribuição obrigatória do Storyset, bem discreta e elegante */}
-        <a
-          href="https://storyset.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs opacity-50 hover:opacity-100 hover:text-emerald-400 transition-all"
-        >
-          Medical illustrations by Storyset
-        </a>
+        {/* Atribuições obrigatórias, bem discretas e elegantes */}
+        <div className="flex items-center gap-2 text-xs opacity-50 hover:opacity-100 transition-all">
+          <a
+            href="https://storyset.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-emerald-400 transition-all"
+          >
+            Medical illustrations by Storyset
+          </a>
+          <span>•</span>
+          <a
+            href="https://www.flaticon.com/free-animated-icons/heart"
+            target="_blank"
+            rel="noreferrer"
+            title="heart animated icons"
+            className="hover:text-emerald-400 transition-all"
+          >
+            Heart animated icons created by Freepik - Flaticon
+          </a>
+        </div>
       </div>
     </footer>
   );
