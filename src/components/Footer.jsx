@@ -11,7 +11,7 @@ export default function Footer() {
         </p>
 
         {/* Atribuições obrigatórias, bem discretas e elegantes */}
-        <div className="flex items-center gap-2 text-xs opacity-50 hover:opacity-100 transition-all">
+        <div className="flex flex-col items-center gap-1 text-xs opacity-50 hover:opacity-100 transition-all sm:flex-row sm:gap-4">
           <a
             href="https://storyset.com/"
             target="_blank"
@@ -20,15 +20,15 @@ export default function Footer() {
           >
             Medical illustrations by Storyset
           </a>
-          <span>•</span>
+          <span className="hidden sm:inline">|</span>
           <a
             href="https://www.flaticon.com/free-animated-icons/heart"
             target="_blank"
             rel="noreferrer"
-            title="heart animated icons"
+            title="ícones animados"
             className="hover:text-emerald-400 transition-all"
           >
-            Heart animated icons created by Freepik - Flaticon
+            Flaticon
           </a>
         </div>
       </div>
