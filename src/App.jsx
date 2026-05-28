@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CookieConsent from "react-cookie-consent";
+import { Helmet } from "react-helmet-async";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import Specialties from "./components/Specialties.jsx";
@@ -14,8 +15,48 @@ function App() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  const seoData = {
+    inicio: {
+      title: "Portal Saúde | Agendamento Rápido de Consultas e Exames Online",
+      description:
+        "Agende consultas médicas e exames de forma rápida e descomplicada. Atendimento online com especialistas em clínica geral, cardiologia, pediatria e neurologia. Cuidado completo para toda a família.",
+      ogTitle: "Portal Saúde | Agendamento Rápido de Consultas e Exames Online",
+      ogDescription:
+        "Agende consultas médicas e exames de forma rápida e descomplicada. Atendimento online com especialistas em clínica geral, cardiologia, pediatria e neurologia.",
+    },
+    especialidades: {
+      title:
+        "Especialidades Médicas | Tratamentos Completos e Cuidados de Saúde",
+      description:
+        "Conheça nossas especialidades médicas: cardiologia, pediatria, neurologia, ortopedia, dermatologia e muito mais. Tratamentos personalizados com profissionais qualificados.",
+      ogTitle:
+        "Especialidades Médicas | Tratamentos Completos e Cuidados de Saúde",
+      ogDescription:
+        "Conheça nossas especialidades médicas: cardiologia, pediatria, neurologia, ortopedia, dermatologia e muito mais. Tratamentos personalizados com profissionais qualificados.",
+    },
+    "corpo-clinico": {
+      title: "Corpo Clínico | Médicos Especialistas Qualificados e Experientes",
+      description:
+        "Conheça nossa equipe de médicos especialistas: cardiologistas, pediatras, neurologistas e outros profissionais altamente qualificados. Cuidado humanizado e atendimento de excelência.",
+      ogTitle:
+        "Corpo Clínico | Médicos Especialistas Qualificados e Experientes",
+      ogDescription:
+        "Conheça nossa equipe de médicos especialistas: cardiologistas, pediatras, neurologistas e outros profissionais altamente qualificados. Cuidado humanizado e atendimento de excelência.",
+    },
+  };
+
+  const currentSeo = seoData[activeTab] || seoData.inicio;
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans">
+      <Helmet>
+        <title>{currentSeo.title}</title>
+        <meta name="description" content={currentSeo.description} />
+        <meta property="og:title" content={currentSeo.ogTitle} />
+        <meta property="og:description" content={currentSeo.ogDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="pt_BR" />
+      </Helmet>
       <Header
         activeTab={activeTab}
         setActiveTab={setActiveTab}
