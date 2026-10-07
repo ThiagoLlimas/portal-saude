@@ -1,6 +1,6 @@
 # 🏥 Portal Saúde — Interface Médica Inteligente & Funcional
 
-> Uma Single Page Application (SPA) para portais de saúde e clínicas médicas que desafia o design tradicional. O projeto equilibra uma paleta de cores corporativa e confiável com uma estética moderna baseada em ilustrações SVG estilo *cartoon*, criando uma experiência de usuário acolhedora e exclusiva.
+> Uma Landing Page para portais de saúde e clínicas médicas que desafia o design tradicional. O projeto equilibra uma paleta de cores corporativa e confiável com uma estética moderna baseada em ilustrações SVG estilo *cartoon*, criando uma experiência de usuário acolhedora e exclusiva.
 
 ---
 
